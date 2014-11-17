@@ -1,3 +1,4 @@
+require "card"
 RSpec.describe CardDeck::Card do
   describe "#value" do
     context "when Ace" do
