@@ -6,7 +6,8 @@ RSpec.describe CardDeck::Card do
       it {is_expected.to eq 1}
     end
     context "when Integer" do
-      it "should return itself"
+      subject {CardDeck::Card.new(rand(2..6), 'diamonds')
+      it {is_expected.to eq 2..6}
     end
   end
 end
