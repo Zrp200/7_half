@@ -1,5 +1,4 @@
-require "card_deck"
-require_relative "card.rb"
+require_relative "card.rb" # Load modified CardDeck::Card
 class Deck # The 40-card deck used in this game
   private :stock
   def initialize
