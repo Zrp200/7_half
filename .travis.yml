@@ -5,7 +5,7 @@ script: bundle exec rspec --color --require spec_helper -f doc
 deploy:
   provider: rubygems
   api_key: 1e6cb5535d85d9652f9f9624c6af49ca459d811e
-  gem: Zrp200/7_1-2
+  gem: 7_1-2
   on:
     all_branches: true
     tags: true
