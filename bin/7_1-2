@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require "card"
+require "deck"
+require "hand"
+player, dealer = Hand.new, Hand.new
