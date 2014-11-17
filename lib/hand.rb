@@ -1,5 +1,5 @@
-require_relative "deck.rb"
-require_relative "card.rb"
+require_relative "deck.rb" # Load Deck
+require_relative "card.rb" # Load modified CardDeck::Card
 class Hand # Acts as the player
   DECK = Deck.new.shuffle # The deck used in the game
   MDHV = 7.5 * (16.0/21.0) # Max dealer hit value. It is at the same ratio as blackjack.
