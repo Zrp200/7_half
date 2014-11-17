@@ -1,6 +1,5 @@
 require_relative "card.rb" # Load modified CardDeck::Card
 class Deck # The 40-card deck used in this game
-  private :stock
   def initialize
     @cards = Array.new
     for suit in CardDeck::Card::SUIT
@@ -12,5 +11,6 @@ class Deck # The 40-card deck used in this game
     end
   end
   def draw; @cards.shift; end # Draw a card from @cards
-  def stock(card, suit); @cards.push CardDeck::Card.new(card, suit); end # Creates a card and puts it into @cards
+  private
+    def stock(card, suit); @cards.push CardDeck::Card.new(card, suit); end # Creates a card and puts it into @cards
 end
