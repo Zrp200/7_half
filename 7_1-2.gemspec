@@ -7,7 +7,7 @@ Gem::Specification.new do |gem|
 	gem.homepage = "http://github.com/zrp200/7_1-2"
 	gem.add_development_dependency "rspec"
 	gem.add_development_dependency "rspec-its"
-	gem.executables << "7_1/2"
+	gem.executables << "7_1-2"
 	gem.summary = "The game of 7\u00bd"
 	gem.add_runtime_dependency "card_deck", "~> 2.0"
 	gem.files = %w(lib/hand.rb lib/deck.rb lib/card.rb)
