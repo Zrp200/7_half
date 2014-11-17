@@ -5,9 +5,9 @@ RSpec.describe CardDeck::Card do
       subject {CardDeck::Card.new("Ace", "diamonds").value}
       it {is_expected.to eq 1}
     end
-    context "when Integer" do
-      subject {CardDeck::Card.new(rand(2..6), 'diamonds').value}
-      it {is_expected.to eq 2..6}
+    context "when 2" do
+      subject {CardDeck::Card.new(2, 'diamonds').value}
+      it {is_expected.to eq 2}
     end
   end
 end
