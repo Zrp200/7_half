@@ -7,4 +7,5 @@ RSpec.describe CardDeck::Card do
     context "when Integer" do
       it "should return itself"
     end
+  end
 end
