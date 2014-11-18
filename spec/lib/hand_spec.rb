@@ -3,8 +3,8 @@ require "deck"
 require "hand"
 
 describe Hand do
-  describe "::MDHV" do
-    subject {Hand::MDHV}
+  describe "::MDSV" do
+    subject {Hand::MDSV}
     it {is_expected.to be < 7.5}
     it {is_expected.to be_instance_of Float}
     it {is_expected.to_not be_instance_of Integer}
