@@ -8,6 +8,7 @@ class Hand # Acts as the player
   def value # The combined value of all the cards in your hand
     sum = 0.0
     for c in @cards; sum += c.value; end
+    return sum
   end
 end
   
