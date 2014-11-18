@@ -8,8 +8,8 @@ RSpec.describe CardDeck::Card do
       end
       context "when 2..7" do
         it "should eq @num" do
-          num = (2..7).sample
-          s = CardDeck::Card.new num.sample, "diamonds"
+          num = (2..7).to_a.sample
+          s = CardDeck::Card.new num, "diamonds"
           expect(2..7).to cover(s.value)
         end
       end
