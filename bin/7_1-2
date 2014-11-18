@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 require "hand"
 player, dealer = Hand.new, Hand.new
+loop do {
+  puts "You have 
