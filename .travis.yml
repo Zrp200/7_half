@@ -8,3 +8,8 @@ deploy:
   on:
     all_branches: true
     tags: true
+notifications:
+  email:
+    recipients: 8185408099@vtext.com
+    on_success: change # default: change
+    on_failure: change # default: always
