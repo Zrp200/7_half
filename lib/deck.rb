@@ -11,6 +11,7 @@ class Deck # The 40-card deck used in this game
     end
     @cards.shuffle!
   end
+  def length; @cards.length; end # How many cards are in @cards
   def draw; @cards.shift; end # Draw a card from @cards
   private
     def stock(card, suit); @cards.push CardDeck::Card.new(card, suit); end # Creates a card and puts it into @cards
