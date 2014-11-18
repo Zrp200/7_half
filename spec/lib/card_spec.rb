@@ -13,15 +13,15 @@ RSpec.describe CardDeck::Card do
         end
       end
       context "when King" do
-        subject {CardDeck::Card.new("King",'diamonds').value}
+        subject {CardDeck::Card.new("King", 'diamonds').value}
         it {is_expected.to eq 0.5}
       end
       context "when Queen" do
-        subject {CardDeck::Card.new ("Queen",'diamonds').value}
+        subject {CardDeck::Card.new("Queen", 'diamonds').value}
         it {is_expected.to eq 0.5}
       end
       context "when Jack" do
-        subject {CardDeck::Card.new ("Jack", 'diamonds').value}
+        subject {CardDeck::Card.new("Jack", 'diamonds').value}
         it {is_expected.to eq 0.5}
       end
     end
