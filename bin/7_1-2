@@ -1,5 +1,20 @@
 #!/usr/bin/env ruby
+
 require "hand"
+def s_puts(message, time=0.5)
+  puts message
+  sleep time
+end
+
 player, dealer = Hand.new, Hand.new
+s_puts "Your turn!", 1
 loop do {
-  puts "You have 
+  s_puts "You have #{player.cards.view}"
+  print "Do you want to (h)it or (s)tay? "
+  case gets.chomp.downcase[0]
+    when 'h' then player.hit
+    when 's' then break
+  end
+  s_puts String.new, 1
+}
+
