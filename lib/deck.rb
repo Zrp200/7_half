@@ -1,5 +1,6 @@
 require_relative "card.rb" # Load modified CardDeck::Card
 class Deck # The 40-card deck used in this game
+  attr_reader :cards
   def initialize
     @cards = Array.new
     for suit in CardDeck::Card::SUIT
