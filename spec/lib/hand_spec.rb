@@ -9,6 +9,10 @@ describe Hand do
     it {is_expected.to be_instance_of Float}
     it {is_expected.to_not be_instance_of Integer}
   end
+  describe "#new" do
+    subject {Hand.new}
+    it {is_expected.to respond_to(:value)}
+    its(:value) {is_expected.to be_instance of Float}
   describe "::DECK" do
     subject {Hand::DECK}
     it {is_expected.to be_instance_of Deck}
