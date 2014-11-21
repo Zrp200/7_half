@@ -15,7 +15,7 @@ describe Hand do
     it {is_expected.to_not be_instance_of CardDeck::Deck}
     its(:draw) {is_expected.to be_instance_of CardDeck::Card}
     it "should have one less card after Hand#new is called" do
-      expect{Hand.new}.to change(subject, :length).by(1)
+      expect{Hand.new}.to change(subject, :length).by(-1)
     end
   end
 end
