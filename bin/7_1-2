@@ -8,7 +8,7 @@ end
 
 player, dealer = Hand.new, Hand.new
 s_puts "Your turn!", 1
-loop do {
+loop do # Player's turn
   s_puts "You have #{player.cards.view}"
   print "Do you want to (h)it or (s)tay? "
   case gets.chomp.downcase[0]
@@ -16,5 +16,6 @@ loop do {
     when 's' then break
   end
   s_puts String.new, 1
-}
+end
+
 
