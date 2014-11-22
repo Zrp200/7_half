@@ -1,5 +1,3 @@
-require "card"
-require "deck"
 require "hand"
 
 describe Hand do
