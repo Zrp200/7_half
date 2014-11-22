@@ -10,6 +10,12 @@ class Hand # Acts as the player
     for c in @cards; sum += c.value; end
     return sum
   end
+  def bust? # Returns true if #value > 7.5
+    if value > 7.5 then true
+    else
+      false
+    end
+  end
 end
   
   
