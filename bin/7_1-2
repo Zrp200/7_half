@@ -2,7 +2,7 @@
 
 require "hand"
 def s_puts(message, time=0.5)
-  puts message
+  puts "\t" + message
   sleep time
 end
 
@@ -11,12 +11,31 @@ s_puts "Your turn!", 1
 loop do # Player's turn
   s_puts "You have #{player.cards.view}"
   break if (player.bust? || player.value == 7.5)
-  print "Do you want to (h)it or (s)tay? "
+  print "\tDo you want to (h)it or (s)tay? "
   case gets.chomp.downcase[0]
     when 'h' then player.hit
     when 's' then break
   end
   s_puts String.new, 1
+end
+if player.bust?
+  s_puts "You bust @ #{player.value}!", 1
+  s_puts "You lose"
+  exit
+end
+until dealer.value > Hand::MDSV
+  s_puts "The dealer hits"
+  dealer.hit
+end
+if dealer.bust?
+  s_puts "The dealer busts @ #{dealer.value}
+  s_puts "You win!", 2
+elsif dealer.value > player.value || dealer.value == player.value
+  s_puts "You lose"
+elsif dealer.value < player.value
+  s_puts "You win"
+else
+  raise "Win error"
 end
 
 
