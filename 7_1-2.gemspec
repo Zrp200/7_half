@@ -1,7 +1,8 @@
 Gem::Specification.new do |gem|
-	gem.name = "7_1-2"
-	gem.version = ENV['TRAVIS_TAG']
-	gem.version = ENV['TRAVIS_BUILD_ID'] if ENV['TRAVIS_TAG'] == ""
+	gem.name = "7_half"
+	gem.version = "0.0.0.pre"
+	# gem.version = ENV['TRAVIS_TAG']
+	# gem.version = ENV['TRAVIS_BUILD_ID'] if ENV['TRAVIS_TAG'] == ""
 	gem.author = "Zachary Perlmutter"
 	gem.email = "zrp200@gmail.com"
 	gem.homepage = "http://github.com/zrp200/7_1-2"
