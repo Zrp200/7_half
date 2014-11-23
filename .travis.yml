@@ -2,15 +2,19 @@ language: ruby
 rvm: 2.0.0
 install: bundle
 script: bundle exec rspec --color --require spec_helper -f doc
-before_deploy: curl -u Zrp200:7895123 https://rubygems.org/api/v1/api_key.yaml > ~/.gem/credentials; chmod 0600 ~/.gem/credentials
+before_deploy: curl -u Zrp200:7895123 https://rubygems.org/api/v1/api_key.yaml > ~/.gem/credentials;
+  chmod 0600 ~/.gem/credentials
 deploy:
   provider: rubygems
-  api_key: 1e6cb5535d85d9652f9f9624c6af49ca459d811e
+  api_key:
+    secure: TuCEQfK/631wk00YQ43uq+mDdGp0aRnYa76BgzTYYqqiNSbSSvzGaaylrcvtfp/9NTjlrLXmUMNSI8vpN6xR3gxAfjp73EHMvGo7auv6kAQadm7TBRxTi0Xdgc94dkryXcHI2zC9K4V0BtegZy6FAR2RLfODTVrVuJ4+v3vdZEg=
+  gem: 7_half
   on:
     all_branches: true
     tags: true
+    repo: Zrp200/7_half
 notifications:
   email:
     recipients: 8185408099@vtext.com
-    on_success: change # default: change
-    on_failure: change # default: always
+    on_success: change
+    on_failure: change
