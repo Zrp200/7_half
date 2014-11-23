@@ -4,7 +4,7 @@ Gem::Specification.new do |gem|
 	gem.version = ENV['TRAVIS_BUILD_ID'] if ENV['TRAVIS_TAG'] == ""
 	gem.author = "Zachary Perlmutter"
 	gem.email = "zrp200@gmail.com"
-	gem.homepage = "http://github.com/zrp200/7_1-2"
+	gem.homepage = "http://github.com/zrp200/7_half"
 	gem.add_development_dependency "rspec"
 	gem.add_development_dependency "rspec-its"
 	gem.executables << "7_half"
