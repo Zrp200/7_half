@@ -14,4 +14,5 @@ DESC
 	gem.summary = "The game of 7\u00bd"
 	gem.add_runtime_dependency "card_deck", "~> 2.0"
 	gem.files = %w(lib/hand.rb lib/deck.rb lib/card.rb)
+	gem.requirements = ["No Powershell"]
 end
