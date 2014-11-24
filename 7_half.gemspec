@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
 	gem.add_development_dependency "rspec-its", "~> 1.1"
 	gem.executables << "7_half"
 	gem.description = <<DESC
-	The is a game played in parts of Africa. It is played with a 30 card deck or a 52 card deck with all the 8s, 9s. and 10s removed. It works like blackjack except you bust at 7\u00bd and face cards are worth \u00bd. You start with one card and play against the dealer.
+	This game is played with a 30 card deck or a 52 card deck with all the 8s, 9s. and 10s removed. It works like blackjack except you bust at 7\u00bd and face cards are worth \u00bd. You start with one card and play against the dealer.
 DESC
 	gem.summary = "The game of 7\u00bd"
 	gem.add_runtime_dependency "card_deck", "~> 2.0"
