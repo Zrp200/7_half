@@ -28,7 +28,7 @@ until dealer.value > Hand::MDSV
   dealer.hit
 end
 if dealer.bust?
-  s_puts "The dealer busts @ #{dealer.value}
+  s_puts "The dealer busts @ #{dealer.value}"
   s_puts "You win!", 2
 elsif dealer.value > player.value || dealer.value == player.value
   s_puts "You lose"
