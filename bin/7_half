@@ -29,6 +29,7 @@ until dealer.value > Hand::MDSV
   s_puts "The dealer hits"
   dealer.hit
 end
+s_puts "The dealer stays @ #{dealer.value}" unless dealer.bust?
 if dealer.bust?
   s_puts "The dealer busts @ #{dealer.value}"
   s_puts "You win!", 2
