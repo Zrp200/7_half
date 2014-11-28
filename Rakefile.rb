@@ -2,7 +2,6 @@ require "mail"
 namespace 'travis' do
   task :email do
     mail = Mail.new do
-      from 'zrp200@gmail.com'
       to 'michael.a.perlmutter.gmail.com'
       subject  "Released #{ENV['TRAVIS_TAG']}"
       body "`gem install 7_half`"
