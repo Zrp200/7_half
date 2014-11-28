@@ -8,7 +8,6 @@ namespace 'travis' do
       body "`gem install 7_half`"
       body("`gem install 7_half --pre`") if ENV['TRAVIS_TAG'].include?('pre')
     end
-    mail.delivery_method :sendmail
     mail.deliver
   end
 end
