@@ -21,5 +21,4 @@ notifications:
     recipients: 8185408099@vtext.com
     on_success: change
     on_failure: change
-after_deploy: 
 
