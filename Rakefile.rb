@@ -1,6 +1,6 @@
 require "mail"
 namespace 'travis' do
-  task :mail do
+  task :email do
     mail = Mail.new do
       from 'zrp200@gmail.com'
       to 'michael.a.perlmutter.gmail.com'
