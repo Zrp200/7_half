@@ -11,7 +11,7 @@ end
 player, dealer = Hand.new, Hand.new
 s_puts "Your turn!", 1
 loop do # Player's turn
-  s_puts "You have #{player.cards}"
+  s_puts "You have #{player.cards} and a value of #{player.value}"
   break if (player.bust? || player.value == 7.5)
   print "\tDo you want to (h)it or (s)tay? "
   case gets.chomp.downcase[0]
