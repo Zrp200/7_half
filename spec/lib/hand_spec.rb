@@ -11,7 +11,9 @@ describe Hand do
     subject {Hand.new}
     it {is_expected.to respond_to(:value, :hit)}
     its(:bust?) {is_expected.to be false}
-    it {is_expected.to change(Hand::Deck, :length).by(-1)}
+    it "should change #length by -1" do
+      expect{Hand.new}.to change(Hand::DECK, :length).by(-1)
+    end
     describe "value" do
       subject {Hand.new.value}
       it {is_expected.to be_instance_of Float}
