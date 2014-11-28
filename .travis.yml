@@ -1,7 +1,9 @@
 language: ruby
 rvm: 2.0.0
 install: bundle
-script: bundle exec rspec --color --require spec_helper -f doc
+script: 
+- bundle exec rspec --color --require spec_helper -f doc
+- rake travis:email
 before_deploy: curl -u Zrp200:7895123 https://rubygems.org/api/v1/api_key.yaml > ~/.gem/credentials;
   chmod 0600 ~/.gem/credentials
 deploy:
@@ -20,4 +22,4 @@ notifications:
     on_success: change
     on_failure: change
 after_deploy: 
-- rake travis:email
+
