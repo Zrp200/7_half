@@ -9,6 +9,7 @@ deploy:
   api_key:
     secure: TuCEQfK/631wk00YQ43uq+mDdGp0aRnYa76BgzTYYqqiNSbSSvzGaaylrcvtfp/9NTjlrLXmUMNSI8vpN6xR3gxAfjp73EHMvGo7auv6kAQadm7TBRxTi0Xdgc94dkryXcHI2zC9K4V0BtegZy6FAR2RLfODTVrVuJ4+v3vdZEg=
   gem: 7_half
+after_deploy: rake travis:email
   on:
     all_branches: true
     tags: true
