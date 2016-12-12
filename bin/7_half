@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
-
+include Java
+import javax.swing.JOptionPane
+include JOptionPane
 require "hand"
 
 def s_puts(message, time=0.5)
@@ -13,6 +15,15 @@ s_puts "Your turn!", 1
 loop do # Player's turn
   s_puts "You have #{player.cards} and a value of #{player.value}"
   break if (player.bust? || player.value == 7.5)
+  show_option_dialog(
+    nil, 
+    "You have #{player.cards} and a value of #{player.value}", 
+    YES_NO_OPTION, 
+    QUESTION_MESSAGE, 
+    nil, "Action", 
+    %w(Hit Stay),
+    "Stay"
+   )
   print "\tDo you want to (h)it or (s)tay? "
   case gets.chomp.downcase[0]
     when 'h' then player.hit
