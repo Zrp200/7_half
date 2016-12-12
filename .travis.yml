@@ -1,5 +1,5 @@
 language: ruby
-rvm: 2.0.0
+rvm: jruby
 install: bundle
 script: 
 - bundle exec rspec --color --require spec_helper -f doc
